@@ -18,6 +18,9 @@ namespace Stack
             theStack.Push("Titanic");
             theStack.Push("Rocky");
 
+            WriteLine("===========================  \nAbout to peek:");
+            WriteLine("'" + theStack.Peek() + "'" + " is at the top of the stack");
+
             WriteLine("===========================  \nThe Stack contains:\n");
             while (!theStack.isEmpty())
             {
