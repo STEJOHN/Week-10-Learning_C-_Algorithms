@@ -11,7 +11,22 @@ namespace Stack
     {
         static void Main(string[] args)
         {
-            //TODO
+            Stack theStack = new Stack(4);
+            theStack.Push("Star Wars");
+            theStack.Push("Jaws");
+            theStack.Push("Jaws 2");
+            theStack.Push("Titanic");
+            theStack.Push("Rocky");
+
+            WriteLine("===========================  \nThe Stack contains:\n");
+            while (!theStack.isEmpty())
+            {
+                string movie = theStack.pop();
+                WriteLine(movie);
+
+               
+            }
+            ReadKey();
         }
     }
 
@@ -40,6 +55,31 @@ namespace Stack
                 top++;
                 stackArray[top] = m;
             }
+        }
+
+        public string pop()
+        {
+            if (isEmpty())
+            {
+                WriteLine("the stack is empty.");
+                return "--";
+            }
+            else
+            {
+                int old_top = top;
+                top--;
+                return stackArray[old_top]; 
+            }
+        }
+
+        public string Peek()
+        {
+            return stackArray[top];
+        }
+
+        public bool isEmpty()
+        {
+            return (top == -1);
         }
 
         private bool isFull()
