@@ -8,10 +8,11 @@ namespace SinglyLinkedList
         {
             SinglyLinkedList myList = new SinglyLinkedList();
             myList.insertFirst(100);
-            myList.insertFrst(50);
+            myList.insertFirst(50);
             myList.insertFirst(99);
             myList.insertFirst(88);
             myList.displayList();
+            Console.ReadKey();
         }
     }
     public class SinglyLinkedList
