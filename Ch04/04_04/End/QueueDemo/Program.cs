@@ -13,6 +13,7 @@ namespace Queue
         static void Main(string[] args)
         {
             DemoQueue();
+            ReadKey();
         }
 
         private static void DemoQueue()
