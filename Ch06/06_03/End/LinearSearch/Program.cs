@@ -20,6 +20,8 @@ namespace LinearSearch
             WriteLine("\nOf which, the IndexOf(\"Madonna\") is {0}",
                 actors.IndexOf("Madonna"));
 
+            ReadKey();
+
         }
 
         private static void PrintOut(List<string> cs)
