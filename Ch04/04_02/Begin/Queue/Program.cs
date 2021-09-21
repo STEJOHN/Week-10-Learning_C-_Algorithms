@@ -6,7 +6,19 @@ namespace QueueDemo
     {
         static void Main(string[] args)
         {
-            //TODO
+            Queue myQueue = new Queue(4);
+            myQueue.Insert(100);
+            myQueue.Insert(10);
+            myQueue.Insert(20);
+            myQueue.Insert(30);
+            myQueue.View();
+
+            WriteLine($"Front of queue is {myQueue.PeekFront()} ");
+            WriteLine($"About to remove item from queue");
+            myQueue.Remove();
+            WriteLine($"Front of queue is {myQueue.PeekFront()} ");
+
+            ReadKey();
         }
     }
 
@@ -69,6 +81,15 @@ namespace QueueDemo
         {
             return (items == maxSize);
 
+        }
+        public void View()
+        {
+            Write("[");
+            for (int i = 0; i < myQueue.Length; i++)
+            {
+                Write(myQueue[i] + " ");
+            }
+            WriteLine("]");
         }
     }
 
