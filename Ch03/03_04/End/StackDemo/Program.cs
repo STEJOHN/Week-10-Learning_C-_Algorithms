@@ -11,10 +11,11 @@ namespace Stacks
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             DemoStack();
+            Console.ReadKey();
         }
-        
+
         private static void DemoStack()
         {
             Stack<string> names = new Stack<string>();
@@ -23,20 +24,20 @@ namespace Stacks
             names.Push("Candy");
             names.Push("Dana");
             names.Push("Edith");
-            
+
             Console.WriteLine("Default content of stack");
-            
+
             foreach (string name in names)
-            {                
+            {
                 Console.WriteLine(name);
             }
 
             Console.WriteLine("\nPopping '{0}'", names.Pop());
             Console.WriteLine("Peek at next item to display what will" +
-                              " be destacked: {0}",names.Peek());
+                              " be destacked: {0}", names.Peek());
             Console.WriteLine("Now, after peek, popping '{0}'", names.Pop());
 
-            
+
             Stack<string> stack2 = new Stack<string>(names.ToArray());
 
             Console.WriteLine("\nContents of the first copy:");
@@ -44,10 +45,10 @@ namespace Stacks
             {
                 Console.WriteLine(name);
             }
-            
+
             string[] array2 = new string[names.Count * 2];
             names.CopyTo(array2, names.Count);
-            
+
             Stack<string> stack3 = new Stack<string>(array2);
 
             Console.WriteLine("\nContents of the second copy, with " +
